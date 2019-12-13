@@ -1,5 +1,5 @@
 const path = require('path');
-const { app, BrowserWindow, dialog } = require('electron');
+const { app, BrowserWindow, dialog, webContents } = require('electron');
 const hotkeys = require('./utils/hotkeys');
 let mainWindow;
 
@@ -23,7 +23,7 @@ function createWindow() {
 
   mainWindowState.manage(mainWindow);
 
-  mainWindow.loadURL('https://music.yandex.ru');
+  mainWindow.loadURL('https://vk.com/audios51392005?section=recoms');
   // mainWindow.webContents.openDevTools()
   hotkeys.registerMediaHotKeys(mainWindow);
 

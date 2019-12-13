@@ -4,13 +4,16 @@ function registerMediaHotKeys(mainWindow) {
   let ret;
 
   const playPause = () => {
-    mainWindow.webContents.send('playPause');
+    mainWindow.webContents.executeJavaScript(
+      `document.querySelector('.top_audio_player_play').click()`)
   };
   const nextTrack = () => {
-    mainWindow.webContents.send('nextTrack');
+    mainWindow.webContents.executeJavaScript(
+      `document.querySelector('.top_audio_player_next').click();`)
   };
   const prevTrack = () => {
-    mainWindow.webContents.send('prevPause');
+    mainWindow.webContents.executeJavaScript(
+      `document.querySelector('.top_audio_player_prev').click();`)
   };
 
   ret = globalShortcut.register('MediaPlayPause', playPause);
