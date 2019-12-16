@@ -1,1 +1,4 @@
-# electron-yandex-music-app
+# electron-vk-music-app
+
+
+Build => electron-forge build 
